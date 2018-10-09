@@ -8,4 +8,6 @@
 
 ## Thesis written by Korean
 - [Content-Based Classification of Musical Genre using Machine Learning](https://bi.snu.ac.kr/Publications/Theses/ParkSJ_MS02.pdf)
+- [An Implementation of Automatic Classification and Recommendation
+Method for Emotion-based Music Player based on Android Platform](http://www.wiset.re.kr/common/webzine_download.jsp?seq=940&filename=23_)
 
