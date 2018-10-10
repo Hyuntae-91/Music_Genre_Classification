@@ -1,6 +1,9 @@
+# ToDo List
 
-1. Make package for coming project
-2. Divide Functions from Mockup Code
-3. Review the code
-4. Subtract "Flask" from Mockup Code
-5. Rebuild whole code to work properly
+- Make package for coming project
+- Divide Functions from Mockup Code
+- Review the code
+- Subtract "Flask" from Mockup Code
+- Rebuild whole code to work properly
+
+- Separate "Learning" Code and "Classify" Code
