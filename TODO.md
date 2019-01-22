@@ -1,4 +1,4 @@
-# ToDo List
+# TODO List
 
 - Make package for coming project
 - Divide Functions from Mockup Code
