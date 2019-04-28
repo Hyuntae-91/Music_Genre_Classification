@@ -12,11 +12,10 @@ from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
-def createTable(name):
+def createTable():
     data={}
     indexing = list(range(0,32))
-    name = DataFrame(data, columns =['freq','time'], index = indexing)
-    return name
+    return DataFrame(data, columns =['freq','time'], index = indexing)
 
 
 def addData(temp_freq,freqN,n):

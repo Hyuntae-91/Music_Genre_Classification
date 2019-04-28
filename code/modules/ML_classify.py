@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import librosa # import librosa library
 from pydub import AudioSegment # import pydub library
 
