@@ -4,13 +4,12 @@
 import librosa
 from pandas import Series, DataFrame
 import pandas as pd
-from AddData import AddData
-from ChoiceCandidate import ChoiceCandidate
-from CreateTable import CreateTable
-from DeleteCandidate import DeleteCandidate
-from SortCandidate import SortCandidate
-from TableIloc import TableIloc
-from TableRename import TableRename
+from . import AddData
+from . import ChoiceCandidate
+from . import CreateTable
+from . import SortCandidate
+from . import TableIloc
+from . import TableRename
 
 
 def Climax(sample):
@@ -57,6 +56,7 @@ def Climax(sample):
             if(count>=4):
                 time_list.append(np.mean(temp)) # Calculate average of temp value and add it on time_list
 
+    # Sort calculated averages in ascending order
     time_list.sort()
 
 
@@ -89,22 +89,31 @@ def Climax(sample):
     climax_length = bar_length*8
 
 
+    max_wave = max(y) # Largest waveform in a song
+    music_length = y.shape # total length of a song
+    bar_num = int(music_length/bar_length)+1 # Number of bar
 
+    music_divide = [] # Save music by each section 
+    n=0
+    for i in range(0,bar_num):
+        music_divide.append(y[n:int(bar_length)*(i+1)])
+        n = n+int(bar_length)
 
+    # Count and store more than 90% of the largest waveform of the song at each node
+    save_count = []
+    for i in range(0,bar_num):
+        count = 0
+        for j in range(0,len(music_divide[i])):
+            if(music_divide[i][j] >= max_wave*0.9):
+                count += 1
+        save_count.append(count)
 
+    # The most bar which has more than 90% of largest waveform is climax
+    bar_climax= save_count.index(max(save_count))
+    climax = bar_climax*bar_length
 
+    music_start = climax/sr 
+    music_duration = (climax/sr + climax_length/sr) - climax/sr 
+    realbar_start = bar_start/sr
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return music_start, music_duration, realbar_start

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from DeleteCandidate import DeleteCandidate
+from . import DeleteCandidate
 
 # Discards a value whose time position value is less than 32
 def ChoiceCandidate(table):
