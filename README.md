@@ -1,11 +1,3 @@
-This project is started in 2017
-There are 2 more teammates on this Project
-
-This project based on Machine Learning
-
-
-<img src="https://user-images.githubusercontent.com/43424015/46453998-0c77e180-c759-11e8-877a-8c820edba83b.png" width="35%"></img>
-=======
 # Music Genre Classification
 
 This project was created in 2017
