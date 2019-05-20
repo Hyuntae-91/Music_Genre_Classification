@@ -9,6 +9,8 @@ The project based on Machine Learning
 </p>
 
 
+## Training Data
+You can download my training data set from [here](https://drive.google.com/open?id=1_ToCRL_EVR6LGIzJA1jcfJLvr-_nvMNV)
 
 
 

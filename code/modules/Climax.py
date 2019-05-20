@@ -3,20 +3,22 @@
 
 import librosa
 from pandas import Series, DataFrame
+import numpy as np
 import pandas as pd
-from . import AddData
-from . import ChoiceCandidate
-from . import CreateTable
-from . import SortCandidate
-from . import TableIloc
-from . import TableRename
+from .AddData import AddData
+from .ChoiceCandidate import ChoiceCandidate
+from .CreateTable import CreateTable
+from .SortCandidate import SortCandidate
+from .TableIloc import TableIloc
+from .TableRename import TableRename
 
 
-def Climax(sample):
+def Climax(sample, y, sr):
     # Create Table for save music frequency samples
     freqTable = []
     for i in range(7):
         freqTable.append(CreateTable()) 
+    temp_freq = CreateTable()
 
     # Store the largest value in the 0th to 6th frequency bands in 32 sections 
     for i in range(0,7):
@@ -59,14 +61,11 @@ def Climax(sample):
     # Sort calculated averages in ascending order
     time_list.sort()
 
-
-
     time_interval = []
     # Find the time interval between each candidates
     for i in range(len(time_list)-1):            
         time_interval.append(time_list[i+1] - time_list[i])
 
-    print(time_interval)
     if(len(time_interval)<=1):
         time_interval.append(861)
     # Sorting the time intervals in ascending order

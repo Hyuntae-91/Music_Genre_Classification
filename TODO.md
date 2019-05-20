@@ -6,4 +6,6 @@
 - Subtract "Flask" from Mockup Code         // Done
 - Rebuild whole code to work properly       // processing
 
-- Create learning code
+- Create learning code                      // processing 
+
+- Check nomalization and standardize
