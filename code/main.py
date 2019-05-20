@@ -10,7 +10,7 @@ MUSIC_DATA_DIR = os.path.dirname(os.path.abspath(os.path.dirname(__file__))) + "
 
 Feature = [[0]*256]
 
-File_Name = 0
+File_Name = 'test_data'
 
 Music_data = Load_Music_Data(MUSIC_DATA_DIR, File_Name)
 
