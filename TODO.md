@@ -10,4 +10,4 @@
 - Check nomalization and standardize
 - Check Label incoding
 - Try to the other algorithm model
-- Modify ReadMe.md file
+- Modify ReadMe.md file                     // Processing
